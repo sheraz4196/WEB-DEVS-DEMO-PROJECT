@@ -1,0 +1,45 @@
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 6rem;
+  row-gap: 6rem;
+  @include respond(land-tab) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond(tab-pot) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond(mobile) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &__img {
+    text-align: center;
+    width: 30%;
+    border-radius: 50%;
+    @include respond(mobile) {
+      width: 10%;
+    }
+  }
+  &__text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: 0.75px;
+    @include respond(land-tab) {
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+  }
+  &-author {
+    font-size: 1.8rem;
+    @include respond(land-tab) {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.navigation {
+  @include respond(mobile) {
+    display: none;
+    opacity: 0;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    @include respond(land-tab) {
+      gap: 2rem;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1.8rem;
+      font-family: inherit;
+      color: $color-grey-dark;
+      font-weight: $medium-weight;
+      transition: all 0.4s;
+      @include respond(land-tab) {
+        font-size: 1.6rem;
+      }
+      @include respond(tab-pot) {
+        font-size: 1.4rem;
+      }
+    }
+    &:hover,
+    &:active {
+      transform: translateY(-0.4rem);
+      text-shadow: 0 2rem 4rem rgba($color-black, 0.5);
+      color: $color-primary;
+    }
+  }
+}

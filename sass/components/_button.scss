@@ -1,0 +1,73 @@
+.btn {
+  &-center {
+    @include respond(mobile) {
+      text-align: center;
+    }
+  }
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 2rem 4rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: $medium-weight;
+    background-color: $color-primary;
+    color: $color-white;
+    margin-right: 3rem;
+    border-radius: 3px;
+
+    border: none;
+    cursor: pointer;
+    @include respond(tab-pot) {
+      font-size: 1.6rem;
+      padding: 1.5rem 3rem;
+    }
+  }
+  &:hover {
+    box-shadow: 0 1.5rem 3rem rgba($color-black, 0.3);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);
+  }
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+.btn-small {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: $medium-weight;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    color: $color-primary;
+    transition: all 0.2s;
+    @include respond(mobile) {
+      text-align: center;
+    }
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
+
+.unstable {
+  &:link,
+  &:visited {
+    background-color: transparent;
+    color: $color-grey-dark;
+    border: 2px solid $color-white;
+    border-radius: 3px;
+    @include respond(mobile) {
+      text-align: center;
+    }
+  }
+  &:hover {
+    border: none;
+  }
+}

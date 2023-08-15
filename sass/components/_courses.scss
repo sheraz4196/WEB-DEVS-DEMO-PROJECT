@@ -1,0 +1,143 @@
+.course {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  @include respond(tab-pot) {
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+  }
+  @include respond(mobile) {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+  &__text__box {
+    padding: 4rem;
+    @include respond(land-tab) {
+      padding: 3rem;
+    }
+    @include respond(tab-pot) {
+      padding: 2rem;
+    }
+    @include respond(mobile) {
+      padding: 1.5rem;
+    }
+    .price {
+      font-size: 8rem;
+      text-align: center;
+      margin: 3rem 0;
+      font-weight: 300;
+      @include respond(land-tab) {
+        font-size: 6rem;
+      }
+      @include respond(mobile) {
+        font-size: 6rem;
+      }
+      @include respond(small-mobile) {
+        font-size: 3rem;
+      }
+    }
+  }
+  &__box {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.6);
+    transition: all 0.4s;
+    border-radius: 3px;
+    overflow: hidden;
+
+    @include respond(tab-pot) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @include respond(mobile) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include respond(small-mobile) {
+      width: 70%;
+      margin: 0 auto;
+    }
+    &:hover {
+      box-shadow: 0 2rem 4rem rgba($color-black, 0.6);
+      transform: translateY(-5rem);
+    }
+  }
+  &__title {
+    color: $color-primary;
+    font-size: 2rem;
+    text-align: center;
+    @include respond(land-tab) {
+      font-size: 3rem;
+    }
+    @include respond(tab-pot) {
+      font-size: 1.6rem;
+    }
+    @include respond(mobile) {
+      font-size: 1.4rem;
+    }
+    @include respond(small-mobile) {
+      font-size: 1.2rem;
+    }
+  }
+  &__description {
+    list-style: none;
+    text-align: center;
+    font-size: 1.6rem;
+    @include respond(small-mobile) {
+      font-size: 1.2rem;
+    }
+    li:not(:last-child) {
+      margin-bottom: 2rem;
+      @include respond(small-desktops) {
+        margin-bottom: 1.8rem;
+      }
+      @include respond(land-tab) {
+        margin-bottom: 1.6rem;
+      }
+      @include respond(tab-pot) {
+        margin-bottom: 1.4rem;
+      }
+      @include respond(mobile) {
+        margin-bottom: 1.2rem;
+      }
+      @include respond(small-mobile) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 20%;
+    margin-bottom: 3rem;
+    @include respond(mobile) {
+      margin-bottom: 2.4rem;
+    }
+  }
+  .buy {
+    &:link,
+    &:visited {
+      width: 100%;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: $bold;
+      box-shadow: none;
+      margin-right: 0;
+      margin-top: 2rem;
+      @include respond(small-desktops) {
+        font-size: 1.8rem;
+      }
+      @include respond(mobile) {
+        font-size: 1.6rem;
+      }
+      @include respond(small-mobile) {
+        font-size: 1rem;
+      }
+    }
+    &:hover,
+    &:active {
+      box-shadow: none;
+      background-color: $color-primary-light;
+    }
+  }
+  .premium {
+    background-color: rgba($backgrounds, 0.6);
+  }
+}

@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 6rem 8rem;
+
+  background-color: $backgrounds;
+  opacity: 1;
+
+  @include respond(land-tab) {
+    padding: 4rem;
+  }
+  @include respond(mobile) {
+    position: relative;
+  }
+  &__logo-box {
+    .logo {
+      width: 10%;
+      transform: scale(4);
+      margin-left: 2rem;
+      @include respond(big-desktop) {
+        width: 14%;
+        transform: scale(6);
+        margin-left: 1rem;
+      }
+      @include respond(mobile) {
+        transform: scale(4) translateY(0.5rem);
+      }
+    }
+  }
+}
